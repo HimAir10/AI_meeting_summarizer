@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Meeting Analyzer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    input[type="text"], input[type="email"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .section {
+      margin-top: 20px;
+    }
+    .section h2 {
+      color: #34495e;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .section p {
+      color: #333;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+    .email-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Meeting Analyzer</h1>
+    <form method="post" action="/predict">
+      <input type="text" name="video_id" placeholder="Enter Video ID" value="{{ session_video_id or '' }}" required>
+      <button type="submit">Analyze</button>
+    </form>
+
+    {% if results %}
+    <div class="section">
+      <h2>🔍 Meeting Summary</h2>
+      <p>{{ results['summary'] }}</p>
+    </div>
+    <div class="section">
+      <h2>Objections & Resolutions</h2>
+      <p>{{ results['objections'] }}</p>
+    </div>
+    <div class="section">
+      <h2>Action Items / Follow-ups</h2>
+      <p>{{ results['actions'] }}</p>
+    </div>
+
+    <!-- Email sending form -->
+    <div class="email-section">
+      <h2>📧 Send this Report via Email</h2>
+      <form method="post" action="/send_email">
+        <input type="email" name="email_to" placeholder="Enter recipient email" required>
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+    {% elif error %}
+      <p style="color: red;">{{ error }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
