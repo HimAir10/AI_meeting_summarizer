@@ -69,6 +69,6 @@ This project is a full-stack application that takes meeting transcripts, generat
 
 1. **Clone the repo:**
 ```bash
-git clone <your-repo-url](https://github.com/HimAir10/AI_meeting_summarizer.git
->
+git clone https://github.com/HimAir10/AI_meeting_summarizer.git
+
 
