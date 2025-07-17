@@ -16,6 +16,15 @@ This project is a full-stack application that takes meeting transcripts, generat
 
 ---
 
+## How to Run- 
+- Just Run the app1.py, an html page will be triggered.
+- On that page it will ask to enter video-Id, as i don't have any meeting transcript in my loacal machine, so i used the youtube transcript API.
+- So, we will just need to Enter some Random youtube video ID, I tried with this "eHJnEHyyN1Y", you can also just copy this and paste it inside the tab, or if you want to continue with another video then follow this procedure -
+- - Open youtube in your browser, open any podcast in english language and copy its address ID, just like this -
+  - <img width="986" height="797" alt="Screenshot 2025-07-17 at 12 38 03 PM" src="https://github.com/user-attachments/assets/df5862b4-62f1-4c63-a2cd-213fb106c567" />
+  - and paste this video Id on the tab and you are all set. 
+
+
 ## 🧠 Methodology
 
 ### 1. **Transcript Handling**
