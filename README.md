@@ -22,7 +22,42 @@ This project is a full-stack application that takes meeting transcripts, generat
 - So, we will just need to Enter some Random youtube video ID, I tried with this "eHJnEHyyN1Y", you can also just copy this and paste it inside the tab, or if you want to continue with another video then follow this procedure -
 - - Open youtube in your browser, open any podcast in english language and copy its address ID, just like this -
   - <img width="986" height="797" alt="Screenshot 2025-07-17 at 12 38 03 PM" src="https://github.com/user-attachments/assets/df5862b4-62f1-4c63-a2cd-213fb106c567" />
-  - and paste this video Id on the tab and you are all set. 
+  - and paste this video Id on the tab and you are all set.
+- And Inside the mail tab, I have only set the Gmail API permission for my personal mail, other people cannot use that, so if you want to access the mail feature to send someone in real then create your own Gmail-API request from Google from here -- https://console.cloud.google.com/
+- - On this website follow these procedures to go ahead -
+  - 1. Create or Select a Project
+    -- Click Select Project > New Project
+    -- Give it a name like YoutubeGmailBot
+
+  - 2. Enable Gmail API
+    -- Go to APIs & Services > Library
+    -- Search for Gmail API
+    -- Click Enable
+    -- Give it a name like "YoutubeGmailBot"
+
+  - 3. Configure OAuth Consent Screen
+    -- Go to APIs & Services > OAuth consent screen
+    -- Choose External
+    -- Fill:
+       -- App name: Youtube Chatbot
+       -- User support email: your Gmail
+       -- Developer contact: your Gmail
+    -- Click Save and Continue until the end
+
+  - 4. Add Yourself as a Test User
+    -- In the same OAuth consent screen, under Test Users
+    -- Click Add Users and enter your Gmail ("Your Email")
+
+  - 5. Create OAuth 2.0 Client ID
+    -- Go to APIs & Services > Credentials
+    -- Click Create Credentials > OAuth client ID
+    -- Application type: Desktop App
+    -- name: anything (e.g. GmailLangchain)
+    -- Click Create
+    -- Click Download JSON
+    -- Rename it to credentials.json
+       
+  - 6. Place credentials.json in the same folder as your Python script
 
 
 ## 🧠 Methodology
