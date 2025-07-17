@@ -16,14 +16,30 @@ This project is a full-stack application that takes meeting transcripts, generat
 
 ---
 
-## How to Run- 
-- Just Run the app1.py, an html page will be triggered.
+## 🚀 How to Run- 
+1. Start the App
+- Run the app1.py file.
+- An HTML page will automatically open in your browser.
+
+2. Input a Video ID
+- On the webpage, you'll be asked to enter a YouTube video ID.
+- Since the app fetches meeting transcripts via the YouTube Transcript API (in the absence of local files), any video with English subtitles will work.
+- Example: You can try with this video ID: eHJnEHyyN1Y.
+
+3. Get a Video ID from YouTube
 - On that page it will ask to enter video-Id, as i don't have any meeting transcript in my loacal machine, so i used the youtube transcript API.
 - So, we will just need to Enter some Random youtube video ID, I tried with this "eHJnEHyyN1Y", you can also just copy this and paste it inside the tab, or if you want to continue with another video then follow this procedure -
 - - Open youtube in your browser, open any podcast in english language and copy its address ID, just like this -
   - <img width="986" height="797" alt="Screenshot 2025-07-17 at 12 38 03 PM" src="https://github.com/user-attachments/assets/df5862b4-62f1-4c63-a2cd-213fb106c567" />
   - and paste this video Id on the tab and you are all set.
-- And Inside the mail tab, I have only set the Gmail API permission for my personal mail, other people cannot use that, so if you want to access the mail feature to send someone in real then create your own Gmail-API request from Google from here -- https://console.cloud.google.com/
+  
+4. Sending the Summary via Email
+- By default, Gmail API access is set up only for the developer's Gmail account.
+- If you want to send the email summary using your own Gmail account, follow these steps to set up Gmail API access:
+
+## Set Up Gmail API Access (For Sending Emails)
+1. Create a Google Cloud Project
+- Go to: https://console.cloud.google.com/
 - - On this website follow these procedures to go ahead -
   - 1. Create or Select a Project
     -- Click Select Project > New Project
@@ -117,6 +133,14 @@ https://github.com/user-attachments/assets/90c1b6e9-f421-4f07-bea2-42884c160fea
 | Text Processing  | LangChain, HuggingFace Transformers    |
 
 ---
+
+## Follow-Up Approach 
+- I have also uploaded a file named "app.py" which is basically a RAG based chatbot to ask questions on the transcript to know everything about the meeting what you want to know.
+- To run that simply on the terminal write 'python app.py' and inside the template folder 'index.html' file refers to the frontend of this file.
+- Have a look to the approach by the following video-
+
+https://github.com/user-attachments/assets/8c046163-7d8b-465e-be13-7125eca6a5a2
+
 
 ## 🛠️ Installation
 
