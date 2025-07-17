@@ -59,6 +59,10 @@ This project is a full-stack application that takes meeting transcripts, generat
        
   - 6. Place credentials.json in the same folder as your Python script
 
+## Demonstration - 
+
+- The video Demonstration will give you the better Idea about the project.
+  
 
 ## 🧠 Methodology
 
