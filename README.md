@@ -61,7 +61,12 @@ This project is a full-stack application that takes meeting transcripts, generat
 
 ## Demonstration - 
 
-- The video Demonstration will give you the better Idea about the project.
+- The following video Demonstration will give you the better Idea about the project.
+  
+
+https://github.com/user-attachments/assets/90c1b6e9-f421-4f07-bea2-42884c160fea
+
+
   
 
 ## 🧠 Methodology
